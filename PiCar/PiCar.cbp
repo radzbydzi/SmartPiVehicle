@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PiCar" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/PiCar" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/PiCar" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="/opt/vc/include" />
+		</Compiler>
+		<Linker>
+			<Add option="`sdl2-config --cflags --libs`" />
+			<Add option="-lEGL" />
+			<Add option="-lGLESv2" />
+			<Add option="-lSDL2" />
+			<Add option="-I /opt/vc/include" />
+			<Add directory="/opt/vc/lib" />
+		</Linker>
+		<Unit filename="include/Application.h" />
+		<Unit filename="include/Gui.h" />
+		<Unit filename="include/GuiObject.h" />
+		<Unit filename="include/Panel.h" />
+		<Unit filename="include/Primitive.h" />
+		<Unit filename="include/Rectangle.h" />
+		<Unit filename="include/Texture.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Application.cpp" />
+		<Unit filename="src/Gui.cpp" />
+		<Unit filename="src/GuiObject.cpp" />
+		<Unit filename="src/Panel.cpp" />
+		<Unit filename="src/Primitive.cpp" />
+		<Unit filename="src/Rectangle.cpp" />
+		<Unit filename="src/Texture.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
